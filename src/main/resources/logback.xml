@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="true">
+
+    <contextName>SERVICE_GIT_PROJECT_NAME</contextName>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ} %p %c [%X] - %replace(%m{200}){"\r\n|\r|\n", " "} %replace(%rEx{200}){"\n", "#!NL!#"} %nopex %n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.dish" level="INFO" additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>
+    <logger name="org.apache.cxf" level="INFO" additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>
+    <!-- TODO: Add other loggers as necessary -->
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>

@@ -1,0 +1,44 @@
+# json schemas for Contract fixtute rests
+/src/test/resources/schemas
+
+# Compiled source #
+**/*.class
+
+# Logs #
+**/*.log
+
+# Packages #
+**/*.war
+**/*.tar
+**/*.zip
+
+# Anything in build/target directories #
+**/build
+**/target
+
+# IntelliJ specific files/directories #
+**/.idea
+**/*.ipr
+**/*.iws
+**/*.iml
+**/atlassian-ide-plugin.xml
+
+# Eclipse specific files/directories #
+**/.classpath
+**/.project
+**/.settings
+**/.metadata
+
+# NetBeans specific files/directories #
+**/.nbattrs
+
+#gradle
+**/.gradle
+
+#rspec
+acceptance/Gemfile.lock
+acceptance/examples.txt
+acceptance/tmp/
+acceptance/simulatorTmp/
+
+.DS_Store

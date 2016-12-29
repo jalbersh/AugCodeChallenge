@@ -1,0 +1,44 @@
+# Commitment Service Spring Boot Application YAML
+# Application info
+info:
+  app:
+    artifact: ${project.artifactId}
+    name: ${project.name}
+    description: ${project.description}
+    version: ${project.version}
+
+# Spring Boot Actuator properties
+endpoints:
+  shutdown:
+    enabled: true
+  health:
+    enabled: true
+
+# Spring Boot port
+server:
+    port: PORT_NUMBER
+
+---
+spring:
+  application:
+    name: SERVICE_GIT_PROJECT_NAME
+  sleuth:
+    sampler:
+      percentage: 1
+    keys:
+      http:
+        headers: "X-Trace-Id,X-Span-Id,X-Context-Session-Id,X-Context-Request-Id,X-Context-Trace-Id,X-Context-Account-Id,X-Context-Customer-Id,X-Context-Order-Id,X-Context-Agent-Id"
+    enabled: true
+    stream:
+      enabled: false
+    log:
+      json:
+        enabled: true
+
+# CF Application info
+application:
+  name: SERVICE_GIT_PROJECT_NAME
+  instance: 1
+
+# These are in alphabetical order
+some_endpoint: https://www.example.com/path/to/resource

@@ -1,0 +1,44 @@
+pairs:
+  # <initials>: <Firstname> <Lastname>[; <emailAddress-id>]
+  dg: Diana Gage; diana.gage@dish.com
+  et: Elaine Tai; etai
+  jdk: Jean de Klerk; parmejean
+  dr: David Razner; drazner
+  kb: Kyle Brill; kbrill
+  md: Mark Douglass; mdouglass
+  mo: Michael Oleske; moleske
+  vm: Vikram Malik; vmalik
+  np: Nicholas Price; nprice
+  se: Sarah Ehmann; sehmann
+  dj: Danny Joyce; djoyce
+  bd: Brad Davidson; bdavidson
+  ks: Krupa Singavarapu; ksingavarapu
+  bs: Brandon Stokes; bstokes
+  jf: Jerry Fallon; jfallon
+  as: Alex Sartan; asartan
+  pt: Praneeth Tangallapally; ptangallapally
+  sn: Sarah Niemeyer; sniemeyer
+  rs: Rajitha Schellenberg; rajitha.schellenberg@dish.com  
+  cd: Corey Downing; cdowning
+  tj: TJ Taylor; ttaylor
+  da: David Adams; david1.adams@dish.com
+  ba: Ben Allred; benjamin.allred@dish.com
+  ch: Christopher Hutchinson; christoher.hutchins@dish.com
+  wj: William Johnson; william.johnson@dish.com
+  ak: Ash Kestrel; anna.findlay@dish.com
+  ml: Michael Lavrisha; mlavrisha@pivotal.io
+  hw: Hunter Williams; huwilliams@pivotal.io
+  am: Austin McKinley; austin.mckinley@acumendigital.com
+  zs: Zach Schulz; zach.schulz@acumendigital.com
+  wt: Will Thomas; william1.thomas@dish.com
+  lf: Lucy Follansbee; lucy.follansbee@dish.com
+  ic: Interview Candidate; ic
+  ls: Laney Smith; lauren1.smith@dish.com
+  pa: Pete Aguilar; peter.aguilar@dish.com  
+  ja: James Albersheim; james.albersheim@dish.com
+  js: James Scovern; james.scovern@dish.com
+  rb: Rachel Broardt; rachel.broardt@dish.com
+  te: Tom Eldar; tom.eldar
+email:
+  prefix: pair
+  domain: pivotal.io

@@ -1,0 +1,4 @@
+---
+applications:
+- name: SERVICE_GIT_PROJECT_NAME-simulators
+  diego: true

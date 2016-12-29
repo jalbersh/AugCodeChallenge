@@ -1,0 +1,26 @@
+source 'https://artifactory.global.dish.com/artifactory/virtual-gems'
+ruby '2.2.4'
+
+gem 'sinatra'
+gem 'httparty'
+gem 'bundler'
+gem 'rack'
+gem 'activesupport'
+gem 'htmlentities'
+gem 'json-schema', '~> 2.6'
+gem 'shotgun', '~> 0.9.1'
+gem 'simulators', '1.0.0'
+
+group :development, :test do
+  gem 'pry-byebug', '~> 3.3.0'
+end
+
+group :test do
+  gem 'rspec'
+  gem 'rspec-expectations'
+  gem 'rspec-retry'
+  gem 'parallel_tests'
+  gem 'pry', '~> 0.10.3'
+  gem 'rspec_junit_formatter'
+  gem 'fuubar'
+end

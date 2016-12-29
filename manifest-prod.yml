@@ -1,0 +1,12 @@
+applications:
+- name: SERVICE_GIT_PROJECT_NAME
+  path: build/libs/SERVICE_GIT_PROJECT_NAME.jar
+  diego: true
+  instances: 2
+  memory: 3072M
+  services:
+  - dish_properties
+  - introscope
+  env:
+    SPRING_PROFILES_ACTIVE: production
+    JAVA_OPTS: ''
