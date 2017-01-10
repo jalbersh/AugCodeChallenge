@@ -18,7 +18,7 @@ ENV['UPPER_UNDERSCORE_NAME'] = (ENV['UPPER_UNDERSCORE_NAME'].to_i + ENV['TEST_EN
 ENV['SIMULATOR'] ||= '11100'
 ENV['SIMULATOR'] = (ENV['SIMULATOR'].to_i + ENV['TEST_ENV_NUMBER'].to_i).to_s
 
-application_spec_helper = ServiceOfferingGroupsServer.new(ENV['UPPER_UNDERSCORE_NAME'], ENV['SIMULATOR'])
+application_spec_helper = APPLICATION_NAMEServer.new(ENV['UPPER_UNDERSCORE_NAME'], ENV['SIMULATOR'])
 simulator = SimulatorServer.new(ENV['SIMULATOR'])
 
 def by(description)

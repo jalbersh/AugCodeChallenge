@@ -1,4 +1,4 @@
-package com.dish.ofm.service.offeringgroups.model;
+package com.dish.ofm.service.PACKAGE_NAME.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

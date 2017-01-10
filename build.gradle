@@ -103,7 +103,6 @@ dependencies {
     )
 
     testCompile(
-            project(':common-utils'),
             "org.springframework.boot:spring-boot-starter-test:$springBootVersion",
             "org.springframework:spring-test:$springVersion",
 

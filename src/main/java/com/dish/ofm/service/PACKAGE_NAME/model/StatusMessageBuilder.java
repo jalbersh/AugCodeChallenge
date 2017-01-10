@@ -1,4 +1,4 @@
-package com.dish.ofm.service.offeringgroups.model;
+package com.dish.ofm.service.PACKAGE_NAME.model;
 
 import java.util.ArrayList;
 import java.util.Arrays;

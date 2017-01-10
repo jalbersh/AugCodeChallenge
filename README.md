@@ -44,12 +44,10 @@ IN ENTIRE PROJECT:
 1. Replace all SERVICE_GIT_PROJECT_NAME with __git-friendly project name__
   1.  Replace all PROJECT_TITLE with __user-friendly project name__
 1.  Replace all PORT_NUMBER with your port number
-  1. Determine the PORT_NUMBER by from [here](https://www.pivotaltracker.com/projects/1434608/stories/115506469)
-  1. Add service name and port to the tracker documentation story above
 1.  Replace all REST_ENDPOINT_CAMEL_CASE with your camel-case REST endpoint (i.e. lookupCommitment)
 1.  Replace all REST_ENDPOINT_SUCCESS_MESSAGE with your REST endpoint success description (i.e. Lookup of customer commitments Successful)
 1.  Replace all REST_ENDPOINT with your REST endpoint suffix (i.e. lookup-commitment)
-1.  Replace all APPLICATION_NAME with the Pascal-case application name (i.e. `CommitmentService`)
+1.  Replace all APPLICATION_NAME with the __Pascal-cased application name__ (i.e. `CommitmentService`)
 1.  Replace all PACKAGE_NAME with __package name__
 1.  Replace all UPPER_UNDERSCORE_NAME with __upper underscore name__
 1.  Replace all LOWER_UNDERSCORE_NAME with __underscore name__

@@ -1,7 +1,7 @@
 
-package com.dish.ofm.service.offeringgroups.model;
+package com.dish.ofm.service.PACKAGE_NAME.model;
 
-import static com.dish.ofm.service.offeringgroups.model.StatusMessageBuilder.statusMessageBuilder;
+import static com.dish.ofm.service.PACKAGE_NAME.model.StatusMessageBuilder.statusMessageBuilder;
 
 public class RestResponse<T> {
     private final T data;

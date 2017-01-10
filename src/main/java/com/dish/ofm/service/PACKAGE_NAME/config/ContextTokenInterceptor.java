@@ -1,4 +1,4 @@
-package com.dish.ofm.service.offeringgroups.config;
+package com.dish.ofm.service.PACKAGE_NAME.config;
 
 import com.dish.cloud.tracing.context.TraceContext;
 import com.squareup.okhttp.Interceptor;
