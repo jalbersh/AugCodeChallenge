@@ -7,6 +7,7 @@ applications:
   services:
   - dish_properties
   - introscope
+  - eureka
   env:
     SPRING_PROFILES_ACTIVE: test
     JAVA_OPTS: ''

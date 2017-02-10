@@ -35,6 +35,22 @@ spring:
       json:
         enabled: true
 
+eureka:
+  instance:
+    instanceId: ${vcap.application.instance_id:id}:${vcap.application.uris[0]:uri}:${spring.application.name:beacon-agent}:${server.port:8080}
+    hostname: apps-dev.global.dish.com/pivotal-ofm/${vcap.application.application_name:beacon-agent}
+    portEnabled: false
+    nonSecurePortEnabled: false
+    securePortEnabled: true
+    statusPageUrl: https://${eureka.instance.hostname}/metrics
+    healthCheckUrl: https://${eureka.instance.hostname}/health
+  client:
+      registerWithEureka: true
+      fetchRegistry: false
+      serviceUrl:
+        defaultZone: ${vcap.services.eureka.credentials.uri:uri}
+      enabled: false
+
 # CF Application info
 application:
   name: SERVICE_GIT_PROJECT_NAME
