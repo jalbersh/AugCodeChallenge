@@ -134,3 +134,11 @@ i.e GET http://localhost:PORT_NUMBER/REST_ENDPOINT
 ```
 Http Status code
 ```
+
+#Eureka
+Eureka configuration has been added to this skeleton. By default Eureka is disabled. Inorder to enable Eureka in CF environments add the following to the properties files:
+```
+eureka:
+  client:
+      enabled: true
+```
