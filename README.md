@@ -142,3 +142,7 @@ eureka:
   client:
       enabled: true
 ```
+
+#Port Documentation:
+Add the port number for the new service to the Dish IT Wiki and Documentation Story:
+```https://it-wiki.global.dish.com/index.php/Beacon_Services_Ports```
