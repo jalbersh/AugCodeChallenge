@@ -43,6 +43,7 @@ IN ENTIRE PROJECT:
 
 1. Replace all SERVICE_GIT_PROJECT_NAME with __git-friendly project name__
   1.  Replace all PROJECT_TITLE with __user-friendly project name__
+1.  Replace all SIMULATOR_PORT_NUMBER with your simulator port number
 1.  Replace all PORT_NUMBER with your port number
 1.  Replace all REST_ENDPOINT_CAMEL_CASE with your camel-case REST endpoint (i.e. lookupCommitment)
 1.  Replace all REST_ENDPOINT_SUCCESS_MESSAGE with your REST endpoint success description (i.e. Lookup of customer commitments Successful)
@@ -60,6 +61,12 @@ IN ENTIRE PROJECT:
     1. Go to Modules and Update module name to __git-friendly project name__
 1. Run `gradle clean build` to make sure everything is still intact
 1. Re-import project in IntelliJ (using Existing sources) and delete 'GIT_PROJECT_NAME.iml' file if found
+
+PORT DOCUMENTATION:
+-------------------
+
+Add the port number for the new service to the Dish IT Wiki and Documentation Story:
+https://it-wiki.global.dish.com/index.php/Beacon_Services_Ports
 
 SAMPLE README below:
 ===============================
@@ -142,8 +149,3 @@ eureka:
   client:
       enabled: true
 ```
-
-## Port Documentation:
-
-Add the port number for the new service to the Dish IT Wiki and Documentation Story:
-https://it-wiki.global.dish.com/index.php/Beacon_Services_Ports

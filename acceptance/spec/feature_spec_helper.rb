@@ -13,9 +13,9 @@ require_relative 'helpers/retry_for'
 require_relative 'helpers/read_fixture'
 require_relative 'helpers/simulator_helper'
 
-ENV['UPPER_UNDERSCORE_NAME'] ||= '8000'
+ENV['UPPER_UNDERSCORE_NAME'] ||= 'PORT_NUMBER'
 ENV['UPPER_UNDERSCORE_NAME'] = (ENV['UPPER_UNDERSCORE_NAME'].to_i + ENV['TEST_ENV_NUMBER'].to_i).to_s
-ENV['SIMULATOR'] ||= '11100'
+ENV['SIMULATOR'] ||= 'SIMULATOR_PORT_NUMBER'
 ENV['SIMULATOR'] = (ENV['SIMULATOR'].to_i + ENV['TEST_ENV_NUMBER'].to_i).to_s
 
 application_spec_helper = APPLICATION_NAMEServer.new(ENV['UPPER_UNDERSCORE_NAME'], ENV['SIMULATOR'])
