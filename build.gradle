@@ -33,8 +33,6 @@ buildscript {
     }
 }
 
-apply from: 'https://gitlab.global.dish.com/pivotal-ofm/common-utils/raw/master/license-configuration.gradle'
-
 repositories {
     maven {
         url 'https://artifactory.global.dish.com/artifactory/repo'
