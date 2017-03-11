@@ -1,6 +1,5 @@
 apply plugin: 'spring-boot'
 apply plugin: 'java'
-apply plugin: 'com.github.hierynomus.license'
 
 archivesBaseName = 'SERVICE_GIT_PROJECT_NAME'
 
@@ -32,6 +31,8 @@ buildscript {
                 'gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.12.1'
     }
 }
+
+apply from: 'https://gitlab.global.dish.com/pivotal-ofm/common-utils/raw/master/license-configuration.gradle'
 
 repositories {
     maven {
