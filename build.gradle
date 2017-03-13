@@ -27,8 +27,7 @@ buildscript {
         ext{
             springBootVersion = '1.3.3.RELEASE'
         }
-        classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion",
-                'gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.12.1'
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
     }
 }
 
@@ -169,14 +168,6 @@ task jarWithSources(type: Jar, dependsOn: classes) {
     classifier = 'source'
     from sourceSets.main.allSource
     from sourceSets.main.output
-}
-
-task cloneLicenses(type: Exec) {
-    delete 'doc'
-    ignoreExitValue false
-    standardOutput = new ByteArrayOutputStream()
-    errorOutput = new ByteArrayOutputStream()
-    commandLine 'git', 'clone', 'https://gitlab.global.dish.com/contracts/licenses.git', 'doc'
 }
 
 defaultTasks 'clean', 'build'
