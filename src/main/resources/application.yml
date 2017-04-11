@@ -51,7 +51,7 @@ eureka:
       registerWithEureka: true
       fetchRegistry: false
       serviceUrl:
-        defaultZone: https://${vcap.services.eureka.credentials.username:eureka}:${vcap.services.eureka.credentials.password:eureka}@${vcap.services.eureka.credentials.uri:localhost:8761/eureka/}
+        defaultZone: https://${vcap.services.eureka.credentials.username:eureka}:${vcap.services.eureka.credentials.password:eureka}@${vcap.services.eureka.credentials.uri:localhost:8761}/eureka/
       enabled: false
 
 ribbon:
