@@ -39,6 +39,7 @@ pairs:
   js: James Scovern; james.scovern@dish.com
   rb: Rachel Broardt; rachel.broardt@dish.com
   te: Tom Eldar; tom.eldar
+  jk: Ji Kim; ji.kim
 email:
   prefix: pair
   domain: pivotal.io
