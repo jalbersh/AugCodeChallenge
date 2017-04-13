@@ -1,6 +1,6 @@
 require_relative './retry_for'
 
-class BeaconSessionServer
+class APPLICATION_NAMEServer
   attr_reader :app_port
 
   def initialize(port, simulator_port)
@@ -15,7 +15,7 @@ class BeaconSessionServer
       puts ''
       puts '<'*80
       puts ''
-      puts "No artifact found, create with 'cd ~/workspace/beacon-session/ && ./gradlew clean assemble'"
+      puts "No artifact found, create with 'cd ~/workspace/SERVICE_GIT_PROJECT_NAME/ && ./gradlew clean assemble'"
       puts ''
       puts '>'*80
       exit!
@@ -23,7 +23,7 @@ class BeaconSessionServer
 
     java_opts = ENV['ACCEPTANCE_JAVA_OPTS']
     @service_offering_groups_app_pid = Process.spawn(
-        "SERVER_PORT=#{app_port} SIMULATOR_PORT=#{simulator_port} java #{java_opts} -jar build/libs/beacon-session.jar",
+        "SERVER_PORT=#{app_port} SIMULATOR_PORT=#{simulator_port} java #{java_opts} -jar build/libs/SERVICE_GIT_PROJECT_NAME.jar",
         chdir: '../',
         pgroup: true,
         out: 'application.std.log',
@@ -63,7 +63,7 @@ class BeaconSessionServer
   end
 
   def artifact_exists?
-    artifact_found = `[ -e ../build/libs/beacon-session.jar ] && echo true || echo false`
+    artifact_found = `[ -e ../build/libs/SERVICE_GIT_PROJECT_NAME.jar ] && echo true || echo false`
     return true if artifact_found == "true\n"
     false
   end

@@ -1,4 +1,4 @@
-package com.dish.ofm.service.beaconsession.controller;
+package com.dish.ofm.service.PACKAGE_NAME.controller;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -12,8 +12,8 @@ import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
-public class BeaconSessionControllerTest {
-    private BeaconSessionController controller;
+public class APPLICATION_NAMEControllerTest {
+    private APPLICATION_NAMEController controller;
 
     @Before
     public void setup() {

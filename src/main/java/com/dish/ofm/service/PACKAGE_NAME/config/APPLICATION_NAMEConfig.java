@@ -1,4 +1,4 @@
-package com.dish.ofm.service.beaconsession.config;
+package com.dish.ofm.service.PACKAGE_NAME.config;
 
 import com.dish.core.metrics.health.RestServiceHealthStatusIndicator;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,7 +11,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 @Configuration
-public class BeaconSessionConfig {
+public class APPLICATION_NAMEConfig {
 
     @Bean
     public HealthIndicator getRestHealthIndicator() {

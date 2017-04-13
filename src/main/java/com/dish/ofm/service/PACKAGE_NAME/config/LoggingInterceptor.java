@@ -1,4 +1,4 @@
-package com.dish.ofm.service.beaconsession.config;
+package com.dish.ofm.service.PACKAGE_NAME.config;
 
 import com.squareup.okhttp.Interceptor;
 import com.squareup.okhttp.Request;

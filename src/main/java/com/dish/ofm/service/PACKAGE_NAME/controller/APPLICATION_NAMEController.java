@@ -1,4 +1,4 @@
-package com.dish.ofm.service.beaconsession.controller;
+package com.dish.ofm.service.PACKAGE_NAME.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -13,24 +13,24 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@Api(value = "/get-session", description = "Beacon Session")
-public class BeaconSessionController {
+@Api(value = "/REST_ENDPOINT", description = "PROJECT_TITLE")
+public class APPLICATION_NAMEController {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(BeaconSessionController.class);
+    private static Logger LOGGER = LoggerFactory.getLogger(APPLICATION_NAMEController.class);
 
-    @RequestMapping(value = "/get-session", method = RequestMethod.GET, produces = "application/json")
-    @ApiOperation(value = "getSession", httpMethod = "GET",
+    @RequestMapping(value = "/REST_ENDPOINT", method = RequestMethod.GET, produces = "application/json")
+    @ApiOperation(value = "REST_ENDPOINT_CAMEL_CASE", httpMethod = "GET",
         response = HttpStatus.class,
         produces = "application/json")
     @ApiResponses(value = {
-        @ApiResponse(code = 200, message = "Get session success", response = HttpStatus.class),
+        @ApiResponse(code = 200, message = "REST_ENDPOINT_SUCCESS_MESSAGE", response = HttpStatus.class),
         @ApiResponse(code = 500, message = "Internal server error")})
-    public ResponseEntity getSession() {
-        LOGGER.info("Received /get-session");
+    public ResponseEntity REST_ENDPOINT_CAMEL_CASE() {
+        LOGGER.info("Received /REST_ENDPOINT");
 
         ResponseEntity<Void> responseEntity = ResponseEntity.ok().build();
 
-        LOGGER.info("Finished /get-session with  responseEntity = {}", responseEntity);
+        LOGGER.info("Finished /REST_ENDPOINT with  responseEntity = {}", responseEntity);
         return responseEntity;
     }
 }

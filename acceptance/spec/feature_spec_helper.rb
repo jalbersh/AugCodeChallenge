@@ -7,18 +7,18 @@ Bundler.require :default, :test
 
 Sinatra::Application.environment = :test
 
-require_relative 'helpers/beacon_session_server'
+require_relative 'helpers/LOWER_UNDERSCORE_NAME_server'
 require_relative 'helpers/simulator_server'
 require_relative 'helpers/retry_for'
 require_relative 'helpers/read_fixture'
 require_relative 'helpers/simulator_helper'
 
-ENV['BEACON_SESSION'] ||= '9060'
-ENV['BEACON_SESSION'] = (ENV['BEACON_SESSION'].to_i + ENV['TEST_ENV_NUMBER'].to_i).to_s
-ENV['SIMULATOR'] ||= '9061'
+ENV['UPPER_UNDERSCORE_NAME'] ||= 'PORT_NUMBER'
+ENV['UPPER_UNDERSCORE_NAME'] = (ENV['UPPER_UNDERSCORE_NAME'].to_i + ENV['TEST_ENV_NUMBER'].to_i).to_s
+ENV['SIMULATOR'] ||= 'SIMULATOR_PORT_NUMBER'
 ENV['SIMULATOR'] = (ENV['SIMULATOR'].to_i + ENV['TEST_ENV_NUMBER'].to_i).to_s
 
-application_spec_helper = BeaconSessionServer.new(ENV['BEACON_SESSION'], ENV['SIMULATOR'])
+application_spec_helper = APPLICATION_NAMEServer.new(ENV['UPPER_UNDERSCORE_NAME'], ENV['SIMULATOR'])
 simulator = SimulatorServer.new(ENV['SIMULATOR'])
 
 def by(description)

@@ -1,6 +1,6 @@
 require_relative '../feature_spec_helper'
 
-describe 'Beacon Session Application' do
+describe 'PROJECT_TITLE Application' do
   it 'has a test' do
 
   end
