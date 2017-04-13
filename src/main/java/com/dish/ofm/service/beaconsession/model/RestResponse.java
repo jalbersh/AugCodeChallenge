@@ -1,7 +1,7 @@
 
-package com.dish.ofm.service.PACKAGE_NAME.model;
+package com.dish.ofm.service.beaconsession.model;
 
-import static com.dish.ofm.service.PACKAGE_NAME.model.StatusMessageBuilder.statusMessageBuilder;
+import static com.dish.ofm.service.beaconsession.model.StatusMessageBuilder.statusMessageBuilder;
 
 public class RestResponse<T> {
     private final T data;

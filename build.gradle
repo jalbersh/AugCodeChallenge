@@ -1,7 +1,7 @@
 apply plugin: 'spring-boot'
 apply plugin: 'java'
 
-archivesBaseName = 'SERVICE_GIT_PROJECT_NAME'
+archivesBaseName = 'beacon-session'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8

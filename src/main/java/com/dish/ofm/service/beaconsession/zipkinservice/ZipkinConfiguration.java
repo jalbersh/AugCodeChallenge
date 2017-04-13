@@ -1,4 +1,4 @@
-package com.dish.ofm.service.PACKAGE_NAME.zipkinservice;
+package com.dish.ofm.service.beaconsession.zipkinservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

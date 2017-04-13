@@ -1,6 +1,6 @@
 applications:
-- name: SERVICE_GIT_PROJECT_NAME
-  path: build/libs/SERVICE_GIT_PROJECT_NAME.jar
+- name: beacon-session
+  path: build/libs/beacon-session.jar
   diego: true
   instances: 2
   memory: 3072M

@@ -2,7 +2,7 @@
 
 <configuration debug="true">
 
-    <contextName>SERVICE_GIT_PROJECT_NAME</contextName>
+    <contextName>beacon-session</contextName>
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>

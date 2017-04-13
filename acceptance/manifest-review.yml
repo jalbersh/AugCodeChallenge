@@ -1,4 +1,4 @@
 ---
 applications:
-- name: SERVICE_GIT_PROJECT_NAME-simulators
+- name: beacon-session-simulators
   diego: true

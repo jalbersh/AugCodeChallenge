@@ -16,12 +16,12 @@ endpoints:
 
 # Spring Boot port
 server:
-    port: PORT_NUMBER
+    port: 9060
 
 ---
 spring:
   application:
-    name: SERVICE_GIT_PROJECT_NAME
+    name: beacon-session
   sleuth:
     sampler:
       percentage: 1
@@ -40,7 +40,7 @@ urlExtension: /
 
 eureka:
   instance:
-    instanceId: ${vcap.application.instance_id:id}:${vcap.application.uris[0]:uri}:${spring.application.name:SERVICE_GIT_PROJECT_NAME}:${server.port:8080}
+    instanceId: ${vcap.application.instance_id:id}:${vcap.application.uris[0]:uri}:${spring.application.name:beacon-session}:${server.port:8080}
     hostname: ${appDomain}
     nonSecurePortEnabled: false
     securePortEnabled: false
@@ -52,14 +52,14 @@ eureka:
       fetchRegistry: false
       serviceUrl:
         defaultZone: https://${vcap.services.eureka.credentials.username:eureka}:${vcap.services.eureka.credentials.password:eureka}@${vcap.services.eureka.credentials.uri:localhost:8761}/eureka/
-      enabled: false
+      enabled: true
 
 ribbon:
   isSecure: true
 
 # CF Application info
 application:
-  name: SERVICE_GIT_PROJECT_NAME
+  name: beacon-session
   instance: 1
 
 # These are in alphabetical order
