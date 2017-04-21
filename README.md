@@ -2,9 +2,10 @@ Using this Skeleton:
 ===============================
 
 1. Create a new public project in gitlab with the project name (i.e. `service-something-here`).
+    1. Put the following text in the description to include with deployinator: `This app is a beacon_deploy_app.`
 1. Clone this new project into local workspace
-  1. `cd ~/workspace`
-  1. `git clone git@gitlab.global.dish.com:service-layer/service-something-here.git`
+    1. `cd ~/workspace`
+    1. `git clone git@gitlab.global.dish.com:service-layer/service-something-here.git`
 
 ## GENERAL SETUP
 

@@ -86,7 +86,6 @@ dependencies {
             "org.springframework.cloud:spring-cloud-sleuth-zipkin-stream:$sleuthVersion",
             'com.dish.zipkin:DishZipkin:1.1.1',
 
-            'com.squareup.okhttp:okhttp:2.5.0',
             'com.dish.cloud:dish-cloud-tracing-http:1.0.0.RC4',
 
             'com.dish.core:metrics-service-health:1.0.7',
