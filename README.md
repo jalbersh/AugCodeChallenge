@@ -55,10 +55,9 @@ IN ENTIRE PROJECT:
 1.  If Zipkin needs to be enabled as part of acceptance criteria, make sleuth enabled flags to true (i.e `enabled: true`) in application.yml file
 1.  Run `gradle clean build`
 1. Update Project settings in IntelliJ
-    1. Open File --> Project Structure (command + ;)
-    1. Update Sdk and language level
-    1. Update project name to __git-friendly project name__
-    1. Go to Modules and Update module name to __git-friendly project name__
+    1. Close IntelliJ
+    1. run cmd ```rm -r -f .idea```
+    1. run cmd ```idea .```
 1. Run `gradle clean build` to make sure everything is still intact
 1. Re-import project in IntelliJ (using Existing sources) and delete 'GIT_PROJECT_NAME.iml' file if found
 
