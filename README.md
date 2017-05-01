@@ -9,6 +9,12 @@ Using this Skeleton:
 
 ## GENERAL SETUP
 
+Running the Startup Script
+--------------------------
+1. Be sure the project is not open in Intellij
+1. Run ``` ./config_project.sh```
+1. Follow the prompts
+
 IN THIS FILE:
 -------------
 1.  Replace all __git-friendly project name__ with your git project name (i.e. `service-something-here`)
