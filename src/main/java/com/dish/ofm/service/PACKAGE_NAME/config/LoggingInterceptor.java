@@ -22,7 +22,7 @@ public class LoggingInterceptor implements Interceptor {
         long t1 = System.nanoTime();
         String requestBodyAsString = maskDetails(getRequestBodyAsString(request));
         logger.info(format("Sending request %s %s with data %s", request.method(), request.url(), requestBodyAsString));
-        logger.info("headers - "+  request.headers());
+        logger.info("headers - " + request.headers());
 
         Response response = chain.proceed(request);
 
@@ -34,9 +34,13 @@ public class LoggingInterceptor implements Interceptor {
         responseBodyString = maskDetails(responseBodyString);
 
         long t2 = System.nanoTime();
-        logger.info(format("Received response %s for %s in %.1fms%n%s",
-            responseBodyString, response.request().url(), (t2 - t1) / 1e6d, response.headers()));
-
+        if (responseBodyString != null && !responseBodyString.isEmpty()) {
+            logger.info(format("Received response with body: %s, method: %s for url: %s with status code: %s in %.1fms%n%s",
+                responseBodyString, response.request().method(), response.request().url(), response.code(), (t2 - t1) / 1e6d, response.headers()));
+        } else {
+            logger.info(format("Received Empty Response for url: %s, method: %s, with status code: %s in %.1fms%n%s",
+                response.request().url(), response.request().method(), response.code(), (t2 - t1) / 1e6d, response.headers()));
+        }
         return copiedResponse;
     }
 
