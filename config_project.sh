@@ -48,38 +48,49 @@ read -p "Continue? (y/n): " contin
 uc="$(echo -e "$contin" | tr '[:lower:]' '[:upper:]')"
 if [[ "${uc:0:1}" == "N" ]];
 then 
-	echo -e "Aborting config..."
-	exit 0
+    echo -e "Aborting config..."
+    exit 0
 fi
 
 echo -e "Well, okay, let's do it..."
+mkdir ../${gitproject}
+cp -r . ../${gitproject}
+
+pushd ../${gitproject}/
 rm -rf ./.git
 rm -rf ./.idea
 echo -e "${Green}Removed git and idea Directories.${NC}"
+popd
 
-pushd src/main/java/com/dish/ofm/service/PACKAGE_NAME/config
+pushd ../${gitproject}/src/main/java/com/dish/ofm/service/PACKAGE_NAME/config
 mv APPLICATION_NAMEConfig.java ${pascalcase}Config.java
 popd
 
-pushd src/main/java/com/dish/ofm/service
+pushd ../${gitproject}/src/main/java/com/dish/ofm/service
 mv APPLICATION_NAMEApplication.java ${pascalcase}Application.java
 popd
 
-pushd src/main/java/com/dish/ofm/service/PACKAGE_NAME/controller
+pushd ../${gitproject}/src/main/java/com/dish/ofm/service/PACKAGE_NAME/controller
 mv APPLICATION_NAMEController.java ${pascalcase}Controller.java
 popd
 echo -e "${Green}Renamed java files...${NC}"
-mv src/main/java/com/dish/ofm/service/PACKAGE_NAME src/main/java/com/dish/ofm/service/${pkgname}
+
+pushd ../${gitproject}/src/main/java/com/dish/ofm/service
+mv PACKAGE_NAME ${pkgname}
+popd
 echo -e "${Green}Renamed source Directory to ${pkgname}...${NC}"
 
-pushd src/test/java/com/dish/ofm/service/PACKAGE_NAME/controller
+pushd ../${gitproject}/src/test/java/com/dish/ofm/service/PACKAGE_NAME/controller
 mv APPLICATION_NAMEControllerTest.java ${pascalcase}ControllerTest.java
 popd
 echo -e "${Green}Renamed java test files...${NC}"
-mv src/test/java/com/dish/ofm/service/PACKAGE_NAME src/test/java/com/dish/ofm/service/${pkgname}
+
+pushd ../${gitproject}/src/test/java/com/dish/ofm/service
+mv PACKAGE_NAME ${pkgname}
+popd
 echo -e "${Green}Renamed source Directory to ${pkgname}...${NC}"
 
-pushd acceptance/spec/helpers
+pushd ../${gitproject}/acceptance/spec/helpers
 mv LOWER_UNDERSCORE_NAME_server.rb ${rubyfriendly}_server.rb
 echo -e "${Green}Renamed ruby test files...${NC}"
 popd
@@ -87,23 +98,33 @@ popd
 for file in $(find . -type f)
 do
     sed -i.sedTmp \
-	-e s/SERVICE_GIT_PROJECT_NAME/${gitproject}/g \
-	-e s/PROJECT_TITLE/"${userfriendly}"/g \
-	-e s/SIMULATOR_PORT_NUMBER/"${simulatorport}"/g \
-	-e s/PORT_NUMBER/"${portnumber}"/g \
-	-e s/REST_ENDPOINT_CAMEL_CASE/"${restendpoint}"/g \
-	-e s/REST_ENDPOINT_SUCCESS_MESSAGE/"${restsuccess}"/g \
-	-e s/REST_ENDPOINT/"${restsuffix}"/g \
-	-e s/APPLICATION_NAME/"${pascalcase}"/g \
-	-e s/PACKAGE_NAME/"${pkgname}"/g \
-	-e s/UPPER_UNDERSCORE_NAME/"${uppercased}"/g \
-	-e s/LOWER_UNDERSCORE_NAME/"${rubyfriendly}"/g \
-	$file
+    -e s/SERVICE_GIT_PROJECT_NAME/${gitproject}/g \
+    -e s/PROJECT_TITLE/"${userfriendly}"/g \
+    -e s/SIMULATOR_PORT_NUMBER/"${simulatorport}"/g \
+    -e s/PORT_NUMBER/"${portnumber}"/g \
+    -e s/REST_ENDPOINT_CAMEL_CASE/"${restendpoint}"/g \
+    -e s/REST_ENDPOINT_SUCCESS_MESSAGE/"${restsuccess}"/g \
+    -e s/REST_ENDPOINT/"${restsuffix}"/g \
+    -e s/APPLICATION_NAME/"${pascalcase}"/g \
+    -e s/PACKAGE_NAME/"${pkgname}"/g \
+    -e s/UPPER_UNDERSCORE_NAME/"${uppercased}"/g \
+    -e s/LOWER_UNDERSCORE_NAME/"${rubyfriendly}"/g \
+    $file
 done
 echo -e "${Green}Replaced tags in all source files...${NC}" 
 echo -e "Updates complete.  "
+
+echo -e "${LBlue}running gradle clean build...${NC}"
 gradle clean build
-echo -e "gradle complete.  "
+echo -e "${Green}gradle complete. ${NC} "
 thumbsUp
 echo -e "Exiting..."
+
+cd ../${gitproject}
+git init
+git add .
+git commit -m "initial checkin"
+git remote add origin https://gitlab.global.dish.com/pivotal-ofm/${gitproject}.git
+git remote -v
+
 open -a /Applications/IntelliJ\ IDEA.app .
