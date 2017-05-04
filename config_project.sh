@@ -118,7 +118,6 @@ echo -e "${LBlue}running gradle clean build...${NC}"
 gradle clean build
 echo -e "${Green}gradle complete. ${NC} "
 thumbsUp
-echo -e "Exiting..."
 
 cd ../${gitproject}
 git init
@@ -126,5 +125,8 @@ git add .
 git commit -m "initial checkin"
 git remote add origin https://gitlab.global.dish.com/pivotal-ofm/${gitproject}.git
 git remote -v
+git push origin master
+echo -e "${Green}git checkin complete. ${NC} "
 
+echo -e "Exiting..."
 open -a /Applications/IntelliJ\ IDEA.app .

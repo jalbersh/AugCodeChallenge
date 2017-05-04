@@ -11,9 +11,16 @@ Using this Skeleton:
 
 Running the Startup Script
 --------------------------
-1. Be sure the project is not open in Intellij
+The config_project.sh script is run from within the beacon-service-skeleton directory.  It will create a directory (named whatever you enter for the git-project-name) up one level.  In other words, it will be at the same level as the beacon-service-skeleton directory.
+
+Once all the configuration is completed in the new project directory, it will perform all the necessary git commands to initialize, add, checkin, and push.  Since there is no good way to create a respository in the gitlab environment, you must create the gitlab repo (in the pivotal-ofm group) before running the script.
+
+
+1. Create a repo for the new project.  This name is what you will enter as the git-project name below
+1. cd into the beacon-service-skeleton directory
 1. Run ``` ./config_project.sh```
 1. Follow the prompts
+
 
 IN THIS FILE:
 -------------
@@ -29,36 +36,36 @@ IN THIS FILE:
 ON THE COMMAND LINE:
 --------------------
 ```bash
-$ cd src/main/java/com/dish/ofm/service/PACKAGE_NAME/config
-$ mv APPLICATION_NAMEConfig.java __Pascal-cased application name__Config.java
+$ cd src/main/java/com/dish/ofm/service/butch/config
+$ mv ButchTestProjectConfig.java __Pascal-cased application name__Config.java
 $ cd ../controller
-$ mv APPLICATION_NAMEController.java __Pascal-cased application name__Controller.java
+$ mv ButchTestProjectController.java __Pascal-cased application name__Controller.java
 $ cd ../..
-$ mv PACKAGE_NAME __package name__
-$ mv APPLICATION_NAMEApplication.java __Pascal-cased application name__Application.java
+$ mv butch __package name__
+$ mv ButchTestProjectApplication.java __Pascal-cased application name__Application.java
 
-$ cd ../../../../../../test/java/com/dish/ofm/service/PACKAGE_NAME/controller
-$ mv APPLICATION_NAMEControllerTest.java __Pascal-cased application name__ControllerTest.java
+$ cd ../../../../../../test/java/com/dish/ofm/service/butch/controller
+$ mv ButchTestProjectControllerTest.java __Pascal-cased application name__ControllerTest.java
 $ cd ../..
-$ mv PACKAGE_NAME __package name__
+$ mv butch __package name__
 $ cd ../../../../../../../acceptance/spec/helpers
-$ mv LOWER_UNDERSCORE_NAME_server.rb  __underscore name___server.rb
+$ mv butch_test_project_server.rb  __underscore name___server.rb
 ```
 
 IN ENTIRE PROJECT:
 ------------------
 
-1. Replace all SERVICE_GIT_PROJECT_NAME with __git-friendly project name__
-  1.  Replace all PROJECT_TITLE with __user-friendly project name__
-1.  Replace all SIMULATOR_PORT_NUMBER with your simulator port number
-1.  Replace all PORT_NUMBER with your port number
-1.  Replace all REST_ENDPOINT_CAMEL_CASE with your camel-case REST endpoint (i.e. lookupCommitment)
-1.  Replace all REST_ENDPOINT_SUCCESS_MESSAGE with your REST endpoint success description (i.e. Lookup of customer commitments Successful)
-1.  Replace all REST_ENDPOINT with your REST endpoint suffix (i.e. lookup-commitment)
-1.  Replace all APPLICATION_NAME with the __Pascal-cased application name__ (i.e. `CommitmentService`)
-1.  Replace all PACKAGE_NAME with __package name__
-1.  Replace all UPPER_UNDERSCORE_NAME with __upper underscore name__
-1.  Replace all LOWER_UNDERSCORE_NAME with __underscore name__
+1. Replace all butch-test with __git-friendly project name__
+  1.  Replace all Butch Test Project with __user-friendly project name__
+1.  Replace all 9099 with your simulator port number
+1.  Replace all 8099 with your port number
+1.  Replace all butchEndpoint with your camel-case REST endpoint (i.e. lookupCommitment)
+1.  Replace all Woot! with your REST endpoint success description (i.e. Lookup of customer commitments Successful)
+1.  Replace all butchSuffix with your REST endpoint suffix (i.e. lookup-commitment)
+1.  Replace all ButchTestProject with the __Pascal-cased application name__ (i.e. `CommitmentService`)
+1.  Replace all butch with __package name__
+1.  Replace all BUTCH_TEST with __upper underscore name__
+1.  Replace all butch_test_project with __underscore name__
 1.  If Zipkin needs to be enabled as part of acceptance criteria, make sleuth enabled flags to true (i.e `enabled: true`) in application.yml file
 1.  Run `gradle clean build`
 1. Update Project settings in IntelliJ
@@ -77,8 +84,8 @@ https://it-wiki.global.dish.com/index.php/Beacon_Services_Ports
 SAMPLE README below:
 ===============================
 
-# PROJECT_TITLE API
-The PROJECT_TITLE API is a RESTful service for interacting with <SERVICE INFO HERE>.
+# Butch Test Project API
+The Butch Test Project API is a RESTful service for interacting with <SERVICE INFO HERE>.
 
 ## Project Requirements
 - JDK 1.8.0-31 or higher
@@ -91,7 +98,7 @@ cert to your local machine.
   1. Create file called `dish.cer` with the contents of the certificate on the [wiki](https://it-wiki.global.dish.com/index.php/Dish_Root_Cert).
   1. Run `sudo ../../bin/keytool --importcert -v -trustcacerts -file dish.cer -keystore cacerts`
   1. When prompted for a password, enter "changeit"
-1. clone `https://gitlab.global.dish.com/service-layer/SERVICE_GIT_PROJECT_NAME.git`
+1. clone `https://gitlab.global.dish.com/service-layer/butch-test.git`
 1. if git alias is setup on your terminal then run `gupdate`, otherwise run `git pull -r & git submodule update --init --recursive --remote`
 1. run `gradle clean build`
 
@@ -117,8 +124,8 @@ cert to your local machine.
 
 To run the app in debug mode :
 
-1. `cd ~/workspace/SERVICE_GIT_PROJECT_NAME`
-1. `gradle clean assemble && SERVER_PORT=PORT_NUMBER java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005 -jar build/libs/SERVICE_GIT_PROJECT_NAME.jar`
+1. `cd ~/workspace/butch-test`
+1. `gradle clean assemble && SERVER_PORT=8099 java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005 -jar build/libs/butch-test.jar`
 
 The app listens on port 5005
 Create a new Remote Configuration in IntelliJ:
@@ -130,15 +137,15 @@ Create a new Remote Configuration in IntelliJ:
 1. Select the remote configuration
 
 ## Api Docs
-Once the application is up and running you can see the [Swagger API Docs](http://localhost:PORT_NUMBER/swagger-ui.html) in your browser.
+Once the application is up and running you can see the [Swagger API Docs](http://localhost:8099/swagger-ui.html) in your browser.
 
-#### 1. PROJECT_TITLE
+#### 1. Butch Test Project
 ##### Sample Request
 
 ```
-GET http://host:PORT_NUMBER/REST_ENDPOINT
+GET http://host:8099/butchSuffix
 
-i.e GET http://localhost:PORT_NUMBER/REST_ENDPOINT
+i.e GET http://localhost:8099/butchSuffix
 
 ```
 

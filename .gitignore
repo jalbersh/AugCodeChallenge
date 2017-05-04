@@ -41,4 +41,7 @@ acceptance/examples.txt
 acceptance/tmp/
 acceptance/simulatorTmp/
 
+#config_project temp files
+**/*.sedTmp
+
 .DS_Store
