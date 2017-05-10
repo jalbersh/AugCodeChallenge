@@ -94,6 +94,7 @@ pushd ../${gitproject}/acceptance/spec/helpers
 mv LOWER_UNDERSCORE_NAME_server.rb ${rubyfriendly}_server.rb
 echo -e "${Green}Renamed ruby test files...${NC}"
 popd
+pushd ../${gitproject}/
 
 for file in $(find . -type f)
 do
@@ -111,6 +112,7 @@ do
     -e s/LOWER_UNDERSCORE_NAME/"${rubyfriendly}"/g \
     $file
 done
+find . -name '*.sedTmp' | xargs rm
 echo -e "${Green}Replaced tags in all source files...${NC}" 
 echo -e "Updates complete.  "
 
