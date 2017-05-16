@@ -15,6 +15,13 @@ Simulators.configure do |config|
   # },
 
   config.endpoint_configurations = {
+      'Service' => {
+          '/example' => {
+              method: :get,
+              default_response: '{}',
+              name: 'Example'
+          }
+      }
   }
 end
 

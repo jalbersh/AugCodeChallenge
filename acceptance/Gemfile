@@ -9,7 +9,7 @@ gem 'activesupport'
 gem 'htmlentities'
 gem 'json-schema', '~> 2.6'
 gem 'shotgun', '~> 0.9.1'
-gem 'simulators', '1.0.0'
+gem 'simulators', '3.2.0'
 
 group :development, :test do
   gem 'pry-byebug', '~> 3.3.0'

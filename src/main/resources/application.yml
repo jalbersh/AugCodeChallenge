@@ -62,5 +62,12 @@ application:
   name: SERVICE_GIT_PROJECT_NAME
   instance: 1
 
+endpoint_bases:
+  default: http://localhost:${simulator.port:11000}
+  gateway: http://localhost:${simulator.port:11000}
+  pivotal_ofm: http://localhost:${simulator.port:11000}
+  socket: ws://localhost:${socket.port:8000}
+
 # These are in alphabetical order
-some_endpoint: https://www.example.com/path/to/resource
+urls:
+  some_endpoint: https://www.example.com/path/to/resource

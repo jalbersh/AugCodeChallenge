@@ -148,7 +148,7 @@ GET http://host:8099/butchSuffix
 i.e GET http://localhost:8099/butchSuffix
 
 ```
-
+````
 ##### Sample Response
 
 ```

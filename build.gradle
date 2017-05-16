@@ -1,7 +1,7 @@
 apply plugin: 'spring-boot'
 apply plugin: 'java'
 
-archivesBaseName = 'beacon-test'
+archivesBaseName = 'SERVICE_GIT_PROJECT_NAME'
 
 apply from: 'https://gitlab.global.dish.com/pivotal-ofm/common-utils/raw/master/beacon-microservice-common-config.gradle'
 

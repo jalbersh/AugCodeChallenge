@@ -53,6 +53,10 @@ RSpec.configure do |config|
   end
 end
 
+def http_get(endpoint)
+  HTTParty.get("http://localhost:#{ENV['UPPER_UNDERSCORE_NAME']}/#{endpoint}")
+end
+
 def get_fixture_data(fixture, status=200)
   return fixture.to_json unless fixture.is_a? Symbol
 
