@@ -6,6 +6,8 @@ Using this Skeleton:
 1. Clone this new project into local workspace
     1. `cd ~/workspace`
     1. `git clone git@gitlab.global.dish.com:service-layer/service-something-here.git`
+1. Add new project to License build
+    1. Add a new command in the Licenses.xml file in beacon-jenkins-chef with your new project in it
 
 ## GENERAL SETUP
 
