@@ -34,6 +34,14 @@ IN THIS FILE:
 1.  Replace all __upper underscore name__ with a system env friendly case of your service name (i.e. `SERVICE_SOMETHING_HERE`)
 1.  Go to the command line and run the following commands:
 
+IN THE JENKINS FILE:
+--------------------
+1. In the 'Build and Test' section:
+    1. Alter the steps based on the needs of your project (ex: remove the cd to Acceptance folder and bundle steps)
+1. In the 'Tag and Push' section:
+    1. Change the gitlab target url
+1. In the 'Bundle Install and Pack' section:
+    1. Alter the steps based on the needs of your project
 
 ON THE COMMAND LINE:
 --------------------
