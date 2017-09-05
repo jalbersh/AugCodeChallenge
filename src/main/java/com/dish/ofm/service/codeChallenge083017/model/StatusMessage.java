@@ -1,4 +1,4 @@
-package com.dish.ofm.service.PACKAGE_NAME.model;
+package com.dish.ofm.service.codeChallenge083017.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

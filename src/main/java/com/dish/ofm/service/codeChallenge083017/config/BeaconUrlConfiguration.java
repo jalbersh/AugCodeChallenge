@@ -1,6 +1,6 @@
-package com.dish.ofm.service.PACKAGE_NAME.config;
+package com.dish.ofm.service.codeChallenge083017.config;
 
-import com.dish.ofm.service.PACKAGE_NAME.model.BeaconUrls;
+import com.dish.ofm.service.codeChallenge083017.model.BeaconUrls;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -9,9 +9,9 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.Map;
 
-import static com.dish.ofm.service.PACKAGE_NAME.utils.MapBuilder.mapBuilder;
-import static com.dish.ofm.service.PACKAGE_NAME.utils.StringHelpers.interpolateString;
-import static com.dish.ofm.service.PACKAGE_NAME.utils.StringHelpers.lowerSnakeToLowerCamel;
+import static com.dish.ofm.service.codeChallenge083017.utils.MapBuilder.mapBuilder;
+import static com.dish.ofm.service.codeChallenge083017.utils.StringHelpers.interpolateString;
+import static com.dish.ofm.service.codeChallenge083017.utils.StringHelpers.lowerSnakeToLowerCamel;
 import static java.util.stream.Collectors.toMap;
 
 @Configuration

@@ -1,4 +1,4 @@
-package com.dish.ofm.service.PACKAGE_NAME.config;
+package com.dish.ofm.service.codeChallenge083017.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

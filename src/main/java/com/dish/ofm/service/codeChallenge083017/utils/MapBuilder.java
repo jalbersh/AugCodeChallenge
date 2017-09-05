@@ -1,4 +1,4 @@
-package com.dish.ofm.service.PACKAGE_NAME.utils;
+package com.dish.ofm.service.codeChallenge083017.utils;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.dish.ofm.service.PACKAGE_NAME.config;
+package com.dish.ofm.service.codeChallenge083017.config;
 
 import com.dish.ofm.service.APPLICATION_NAMEApplication;
 import org.slf4j.Logger;

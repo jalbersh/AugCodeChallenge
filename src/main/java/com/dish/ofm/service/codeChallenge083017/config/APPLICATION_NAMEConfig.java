@@ -1,4 +1,4 @@
-package com.dish.ofm.service.PACKAGE_NAME.config;
+package com.dish.ofm.service.codeChallenge083017.config;
 
 import com.dish.core.metrics.health.RestServiceHealthStatusIndicator;
 import org.springframework.boot.actuate.health.HealthIndicator;
