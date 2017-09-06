@@ -38,7 +38,7 @@ public class CipherServiceTest {
     public void testEncode3() throws Exception {
         cipherService = new CipherService("H");
         String output = cipherService.encode("I AM CLOSE TO WINNING");
-        assertThat(output, equalTo("Q IU KTWAM BW EQVVQVO"));
+        assertThat(output, equalTo("P HT JSVZL AV DPUUPUN"));
     }
 
     @Test
@@ -58,7 +58,7 @@ public class CipherServiceTest {
     @Test
     public void testDecode3() throws Exception {
         cipherService = new CipherService("H");
-        String output = cipherService.decode("Q IU KTWAM BW EQVVQVO");
+        String output = cipherService.decode("P HT JSVZL AV DPUUPUN");
         assertThat(output, equalTo("I AM CLOSE TO WINNING"));
     }
 }

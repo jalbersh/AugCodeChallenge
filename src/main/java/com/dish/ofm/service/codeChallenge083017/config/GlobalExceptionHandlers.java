@@ -1,6 +1,6 @@
 package com.dish.ofm.service.codeChallenge083017.config;
 
-import com.dish.ofm.service.APPLICATION_NAMEApplication;
+import com.dish.ofm.service.CodeChallenge083017Application;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.AnnotationUtils;
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @ControllerAdvice
 public class GlobalExceptionHandlers {
-    private final Logger LOGGER = LoggerFactory.getLogger(APPLICATION_NAMEApplication.class);
+    private final Logger LOGGER = LoggerFactory.getLogger(CodeChallenge083017Application.class);
 
     @ExceptionHandler(value = RestClientException.class)
     public ResponseEntity<?>
